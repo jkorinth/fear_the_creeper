@@ -1,0 +1,201 @@
+(footprint "LED_LG_T671-L2N1-1-Z"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -0.468 -2.4064 0)
+		(layer "F.SilkS")
+		(uuid "0c33fe75-463a-44f0-8cc0-24f2e409cfee")
+		(effects
+			(font
+				(size 0.64 0.64)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "LED_LG_T671-L2N1-1-Z"
+		(at 5.628 2.4064 0)
+		(layer "F.Fab")
+		(uuid "723073e5-25d9-4e72-93cf-20c6d7a90573")
+		(effects
+			(font
+				(size 0.64 0.64)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0e3576eb-e430-4a80-b377-dc0aac465a53")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5d1cf665-c56a-4c60-aa74-561e3c32f060")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -0.43 -1.5)
+		(end 0.43 -1.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e1ff2160-d4ff-4b30-a3d6-c3152f41fea3")
+	)
+	(fp_line
+		(start -0.43 1.5)
+		(end 0.43 1.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c1dbbfa2-e1ef-4a38-b1ba-5285fa8271c7")
+	)
+	(fp_circle
+		(center -2.75 0)
+		(end -2.65 0)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "56d3855a-bde8-4450-91d4-206b2d6dc5b1")
+	)
+	(fp_line
+		(start -2.5 -1.75)
+		(end -2.5 1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a6e34734-1af1-4f1c-91fc-c471d67dcc0e")
+	)
+	(fp_line
+		(start -2.5 1.75)
+		(end 2.5 1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "72855e86-c0be-4148-a52c-25ca9b38d179")
+	)
+	(fp_line
+		(start 2.5 -1.75)
+		(end -2.5 -1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bccb30c5-d0ad-4c56-bde1-40620dabf0e6")
+	)
+	(fp_line
+		(start 2.5 1.75)
+		(end 2.5 -1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bc69148d-8847-4c3a-b614-cc4ede22eef7")
+	)
+	(fp_line
+		(start -1.7 -1.5)
+		(end -1.7 1.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3f77d817-0bf4-4f5e-a056-8a3dca5741b6")
+	)
+	(fp_line
+		(start -1.7 -1.5)
+		(end 1.7 -1.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "80a1bba0-8aaa-433a-acf0-28f2b8a33cbd")
+	)
+	(fp_line
+		(start -1.7 1.5)
+		(end 1.7 1.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "83c9c7af-b117-4f97-b4c3-dbb27b3fb193")
+	)
+	(fp_line
+		(start 1.7 -1.5)
+		(end 1.7 1.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9f563843-9cde-4299-88f5-1b9e7ec76170")
+	)
+	(fp_circle
+		(center -2.75 0)
+		(end -2.65 0)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "22cf7411-32cf-4636-bcea-9667abff3c0a")
+	)
+	(pad "1" smd rect
+		(at -1.5 0)
+		(size 1.5 2.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "60fa868e-3fd2-425f-94bc-8f97b5acab4b")
+	)
+	(pad "2" smd rect
+		(at 1.5 0)
+		(size 1.5 2.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "6aced721-f1a6-45c1-a155-9c5711a35344")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/components/LG_T67F-R1T1-24/LG T67F-R1T1-24.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)

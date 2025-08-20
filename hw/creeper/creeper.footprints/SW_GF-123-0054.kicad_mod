@@ -1,0 +1,224 @@
+(footprint "SW_GF-123-0054"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -4.445 -6.985 0)
+		(layer "F.SilkS")
+		(uuid "39172362-0893-460f-bdea-8347b712e751")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW_GF-123-0054"
+		(at 1.27 6.985 0)
+		(layer "F.Fab")
+		(uuid "b3a1bd39-3f7d-4460-9ab7-b8076fbee067")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2236d980-cb58-4da4-b837-0199ebdaf412")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "36373b22-56c6-46c7-b9ce-f8b2efede17c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -8.23 5.08)
+		(end -8.23 -5.08)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "03697b02-13e4-43cb-b442-af5f348c4dc7")
+	)
+	(fp_line
+		(start 8.23 -5.08)
+		(end -8.23 -5.08)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d3fe6532-27de-4093-8c85-0e1d8cfaa135")
+	)
+	(fp_line
+		(start 8.23 -5.08)
+		(end 8.23 5.08)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cd9dea10-3f57-4571-a178-c51ae0422965")
+	)
+	(fp_line
+		(start 8.23 -3.3)
+		(end 8.23 -1.75)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7be49a30-8b3a-4917-9fa6-4ee8cf3d4d09")
+	)
+	(fp_line
+		(start 8.23 5.08)
+		(end -8.23 5.08)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5ee1b85b-87ec-457a-9ddf-6675c9e0b4c4")
+	)
+	(fp_circle
+		(center -9.04 -1.57)
+		(end -8.94 -1.57)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "604291ef-7809-40b6-a35b-815219b06ec6")
+	)
+	(fp_line
+		(start -8.48 -5.33)
+		(end 8.48 -5.33)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2c63a11a-d82c-4547-9e5c-6203aa44c514")
+	)
+	(fp_line
+		(start -8.48 5.33)
+		(end -8.48 -5.33)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3ae9b32a-fd6b-4bd2-9c8f-5902e12e2758")
+	)
+	(fp_line
+		(start 8.48 -5.33)
+		(end 8.48 5.33)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "19d89e1f-6f80-4b1a-b149-769dbbcfc11b")
+	)
+	(fp_line
+		(start 8.48 5.33)
+		(end -8.48 5.33)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5187e9aa-b187-4a75-9811-8254df95d67d")
+	)
+	(fp_line
+		(start -8.23 -5.08)
+		(end 8.23 -5.08)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b62ecb7a-4509-4b84-ad55-8de58eac60e8")
+	)
+	(fp_line
+		(start -8.23 5.08)
+		(end -8.23 -5.08)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f3a55247-44ff-43eb-afb5-0e2f642b27e1")
+	)
+	(fp_line
+		(start 8.23 -5.08)
+		(end 8.23 5.08)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7a88d315-bb55-4b1f-840a-b7123250899e")
+	)
+	(fp_line
+		(start 8.23 5.08)
+		(end -8.23 5.08)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9f1d866c-5b66-4800-b37c-a8fb5675230e")
+	)
+	(fp_circle
+		(center -9.04 -1.57)
+		(end -8.94 -1.57)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "af7f8c06-5c5b-4025-a7e6-a29103dca6b5")
+	)
+	(pad "1" thru_hole rect
+		(at -4.6 -1.09)
+		(size 2.625 2.625)
+		(drill 1.75)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "655c4207-335f-4d22-ad11-92562d99af27")
+	)
+	(pad "2" thru_hole circle
+		(at 0 -1.09)
+		(size 2.625 2.625)
+		(drill 1.75)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "3ff9520e-fa61-4680-90e3-ecca8022827b")
+	)
+	(embedded_fonts no)
+)
