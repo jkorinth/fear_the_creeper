@@ -38,6 +38,8 @@
             # Libraries that PlatformIO might need
             libusb1
             pkg-config
+	    clang-analyzer
+	    clang
           ];
 
           # Environment variables

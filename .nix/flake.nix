@@ -18,6 +18,7 @@
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [
             arduino-cli
+            audacity
             avrdude
             cmake
             cppcheck
@@ -27,14 +28,16 @@
             jre
             kicad
             meshlab
+            minicom
             openscad
+            platformio
             python3Full
             python3Packages.numpy
             python3Packages.pydub
+            saleae-logic-2
             super-slicer
             vscode
-            platformio
-	    saleae-logic-2
+            zip
           ];
         };
       }
