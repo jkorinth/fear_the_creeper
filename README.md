@@ -10,9 +10,9 @@ And Mincraft. :)
 
 * 35mm x 35mm 2-layer PCB w/dedicated ground plane
 * Microcontroller: ATtiny85
-* CR2450 battery
-* Accelerometer: LIST2DH12TR (low power, motion detection interrupt)
-* piezzo buzzer (SMT-1324-TW-1V-HT-R)
+* CR23xx battery
+* Accelerometer: IIS328DQTR (low power, interrupt)
+* piezzo buzzer
 * 2x discrete LEDs (LP T67F)
 * battery holder
 * On/Off switch
@@ -36,4 +36,3 @@ And Mincraft. :)
 * Electronic Design: KiCAD
 * Mechanical Design: FreeCAD
 * Software Design: Arduino
-
