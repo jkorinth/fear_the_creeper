@@ -829,6 +829,130 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R_Small"
 			(pin_numbers
 				(hide yes)
@@ -1434,6 +1558,156 @@
 						)
 					)
 					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3267,6 +3541,19 @@
 		(uuid 757c103b-e492-4026-a58b-d480413a7ae9)
 	)
 	(rectangle
+		(start 127 101.6)
+		(end 177.8 133.35)
+		(stroke
+			(width 0.254)
+			(type solid)
+			(color 132 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid b0f898f5-43b0-4db3-b838-fd922243acc4)
+	)
+	(rectangle
 		(start 25.4 101.6)
 		(end 76.2 133.35)
 		(stroke
@@ -3368,7 +3655,7 @@
 		)
 		(uuid "8aa30785-6e41-4313-b111-41fef752cf1a")
 	)
-	(text "2025-SEP-30"
+	(text "2025-OCT-19"
 		(exclude_from_sim no)
 		(at 213.868 193.294 0)
 		(effects
@@ -3448,7 +3735,7 @@
 		)
 		(uuid "d60535bf-e6c9-4822-ab8d-2e5f887ec512")
 	)
-	(text "0.10"
+	(text "0.11"
 		(exclude_from_sim no)
 		(at 269.748 193.548 0)
 		(effects
@@ -3457,6 +3744,20 @@
 			)
 		)
 		(uuid "eee7dfd6-d7bb-4933-b84e-e1e276d484ea")
+	)
+	(text "Spring vibration sensor"
+		(exclude_from_sim no)
+		(at 128.524 103.124 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+				(thickness 0.3556)
+				(bold yes)
+				(color 132 0 0 1)
+			)
+			(justify left top)
+		)
+		(uuid "f0b34ceb-0f3d-433a-a1e3-5f93f0917fb4")
 	)
 	(text "Accelerometer"
 		(exclude_from_sim no)
@@ -4653,7 +4954,7 @@
 				)
 				(uuid "8d321216-a7df-49d8-9e14-6670fcbb3fc8")
 			)
-			(table_cell ""
+			(table_cell "0.11"
 				(exclude_from_sim no)
 				(at 189.23 80.01 0)
 				(size 22.86 2.54)
@@ -4670,7 +4971,7 @@
 				)
 				(uuid "f6053abe-97f7-4268-993a-e1dedd7e1c01")
 			)
-			(table_cell ""
+			(table_cell "Accelerometers are hard to source, replace by optional spring"
 				(exclude_from_sim no)
 				(at 212.09 80.01 0)
 				(size 67.31 2.54)
@@ -4704,7 +5005,7 @@
 				)
 				(uuid "e0466e84-cbcb-4159-a3d8-f513d28f50bf")
 			)
-			(table_cell ""
+			(table_cell "vibration sensor."
 				(exclude_from_sim no)
 				(at 212.09 82.55 0)
 				(size 67.31 2.54)
@@ -5472,7 +5773,7 @@
 		)
 	)
 	(label "SDA1"
-		(at 165.1 91.44 270)
+		(at 157.48 91.44 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5502,7 +5803,7 @@
 		(uuid "10661b46-2e2e-4581-bd9e-7dc72e699534")
 	)
 	(label "+3V"
-		(at 165.1 86.36 90)
+		(at 157.48 86.36 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5582,7 +5883,17 @@
 		(uuid "3bf17a2e-5de2-4e30-9e49-3dcfc58c1c35")
 	)
 	(label "+3V"
-		(at 149.86 86.36 90)
+		(at 160.02 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3c1f81fc-2378-4978-8480-36f97f3f440c")
+	)
+	(label "+3V"
+		(at 142.24 86.36 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5612,8 +5923,18 @@
 		)
 		(uuid "597793f2-f1e9-4d3e-afca-8f545a9a3dc0")
 	)
+	(label "INT"
+		(at 142.24 120.65 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5befa08b-a31f-4762-91f9-aa5a0256ac43")
+	)
 	(label "SCL1"
-		(at 149.86 91.44 270)
+		(at 142.24 91.44 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5913,6 +6234,74 @@
 		(uuid "fe4761d8-58ca-49ca-bce9-2f619001ee18")
 	)
 	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 147.32 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0b5947e1-627c-4358-a888-721263eb5354")
+		(property "Reference" "SVS1"
+			(at 147.32 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 147.32 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "creeper:SW_180xxP_Spring_Vibration_Sensor"
+			(at 147.32 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 147.32 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d1a78cf2-0b51-4d38-b11e-d6dc5685bd5d")
+		)
+		(pin "2"
+			(uuid "3c39dd82-4540-4e4f-b639-88cf6f83388b")
+		)
+		(instances
+			(project ""
+				(path "/15008eb5-6682-493f-a281-575da1029302"
+					(reference "SVS1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 50.8 91.44 0)
 		(unit 1)
@@ -6057,6 +6446,15 @@
 				(hide yes)
 			)
 		)
+		(property "MANUFACTURER" ""
+			(at 48.26 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b00af4c6-d76c-4a1f-88fe-c8b29d8a8396")
 		)
@@ -6079,7 +6477,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "206bb6ff-ded4-4b64-9e45-21cbe881f07e")
 		(property "Reference" "U3"
 			(at 143.764 39.37 0)
@@ -6118,6 +6516,42 @@
 			)
 		)
 		(property "Description" ""
+			(at 151.13 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Nexperia USA Inc."
+			(at 151.13 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "74HC4066BQ-Q100,11"
+			(at 151.13 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SolderJoints" "15"
+			(at 151.13 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
 			(at 151.13 53.34 0)
 			(effects
 				(font
@@ -6252,6 +6686,15 @@
 			)
 		)
 		(property "SolderJoints" "2"
+			(at 105.41 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
 			(at 105.41 38.1 90)
 			(effects
 				(font
@@ -6489,6 +6932,15 @@
 				(hide yes)
 			)
 		)
+		(property "MANUFACTURER" ""
+			(at 96.52 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1b358e44-a095-420b-aef9-7e992a4c5998")
 		)
@@ -6583,6 +7035,15 @@
 				(hide yes)
 			)
 		)
+		(property "MANUFACTURER" ""
+			(at 78.74 171.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "81ee99d9-6970-45e6-86f1-89c8cb330f3c")
 		)
@@ -6669,9 +7130,9 @@
 		(at 101.6 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "365dcf45-da43-4836-a55d-8d6613cc0f4c")
 		(property "Reference" "J2"
 			(at 102.235 109.22 0)
@@ -6708,6 +7169,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated"
+			(at 101.6 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
 			(at 101.6 119.38 0)
 			(effects
 				(font
@@ -6822,6 +7292,15 @@
 				(hide yes)
 			)
 		)
+		(property "MANUFACTURER" ""
+			(at 119.38 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c52ea3cf-c7a6-4d6d-af74-232dd858940b")
 		)
@@ -6842,7 +7321,7 @@
 		(at 39.37 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp yes)
 		(fields_autoplaced yes)
@@ -6884,6 +7363,15 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 39.37 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
 			(at 39.37 40.64 0)
 			(effects
 				(font
@@ -7106,7 +7594,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 149.86 88.9 0)
+		(at 142.24 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7115,7 +7603,7 @@
 		(fields_autoplaced yes)
 		(uuid "77c1bb71-a0b9-4505-87b4-e5131667bbfb")
 		(property "Reference" "RPU_SCL1"
-			(at 152.4 87.6299 0)
+			(at 144.78 87.6299 0)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -7124,7 +7612,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 152.4 90.1699 0)
+			(at 144.78 90.1699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7133,7 +7621,7 @@
 			)
 		)
 		(property "Footprint" "creeper:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 149.86 88.9 0)
+			(at 142.24 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7142,7 +7630,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 149.86 88.9 0)
+			(at 142.24 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7151,7 +7639,7 @@
 			)
 		)
 		(property "Description" "5% thick film 0.1mW"
-			(at 149.86 88.9 0)
+			(at 142.24 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7160,7 +7648,7 @@
 			)
 		)
 		(property "SolderJoints" "2"
-			(at 149.86 88.9 0)
+			(at 142.24 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7169,7 +7657,7 @@
 			)
 		)
 		(property "Manufacturer" "Vishay Dale"
-			(at 149.86 88.9 0)
+			(at 142.24 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7178,7 +7666,16 @@
 			)
 		)
 		(property "MPN" "CRCW060310K0JNEA"
-			(at 149.86 88.9 0)
+			(at 142.24 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 142.24 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7422,6 +7919,15 @@
 				(hide yes)
 			)
 		)
+		(property "MANUFACTURER" ""
+			(at 106.68 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a3a3585b-452e-4536-a7ca-d15d309ef1f9")
 		)
@@ -7518,6 +8024,15 @@
 			)
 		)
 		(property "SolderJoints" "2"
+			(at 96.52 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
 			(at 96.52 91.44 0)
 			(effects
 				(font
@@ -7653,7 +8168,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Single-cell battery"
+		(property "Description" "BATT RETAINER COIN 23MM PC PIN"
 			(at 50.8 63.5 0)
 			(effects
 				(font
@@ -7681,6 +8196,15 @@
 			)
 		)
 		(property "SolderJoints" "2"
+			(at 50.8 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
 			(at 50.8 63.5 0)
 			(effects
 				(font
@@ -7852,6 +8376,15 @@
 				(hide yes)
 			)
 		)
+		(property "MANUFACTURER" ""
+			(at 39.37 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cecd4c3a-559d-4cc2-a2ea-27e943d53ba3")
 		)
@@ -7869,7 +8402,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 165.1 88.9 0)
+		(at 157.48 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7878,7 +8411,7 @@
 		(fields_autoplaced yes)
 		(uuid "8eac6fe2-55e9-4982-8492-aabff13c3323")
 		(property "Reference" "RPU_SDA1"
-			(at 167.64 87.6299 0)
+			(at 160.02 87.6299 0)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -7887,7 +8420,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 167.64 90.1699 0)
+			(at 160.02 90.1699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7896,7 +8429,7 @@
 			)
 		)
 		(property "Footprint" "creeper:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 165.1 88.9 0)
+			(at 157.48 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7905,7 +8438,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 88.9 0)
+			(at 157.48 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7914,7 +8447,7 @@
 			)
 		)
 		(property "Description" "5% thick film 0.1mW"
-			(at 165.1 88.9 0)
+			(at 157.48 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7923,7 +8456,7 @@
 			)
 		)
 		(property "Manufacturer" "Vishay Dale"
-			(at 165.1 88.9 0)
+			(at 157.48 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7932,7 +8465,7 @@
 			)
 		)
 		(property "MPN" "CRCW060310K0JNEA"
-			(at 165.1 88.9 0)
+			(at 157.48 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7941,7 +8474,16 @@
 			)
 		)
 		(property "SolderJoints" "2"
-			(at 165.1 88.9 0)
+			(at 157.48 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 157.48 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8043,6 +8585,15 @@
 				(hide yes)
 			)
 		)
+		(property "MANUFACTURER" ""
+			(at 82.55 54.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a9598dc2-a7f0-4918-a625-423079eee976")
 		)
@@ -8063,7 +8614,7 @@
 		(at 50.8 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -8115,6 +8666,15 @@
 				(hide yes)
 			)
 		)
+		(property "MANUFACTURER" ""
+			(at 50.8 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f03bbb19-e404-4055-bab4-64a5da0a969d")
 		)
@@ -8125,6 +8685,74 @@
 			(project ""
 				(path "/15008eb5-6682-493f-a281-575da1029302"
 					(reference "BZ1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 156.21 120.65 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bcc6a6de-d343-424d-b6ec-16ba561b506a")
+		(property "Reference" "RPU_SVS1"
+			(at 156.21 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 156.21 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "creeper:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 156.21 122.428 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 156.21 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 156.21 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6d6c99c7-c90e-460b-8e3e-881aafe22de3")
+		)
+		(pin "1"
+			(uuid "ffbf1718-d9b6-42f4-97df-0684521814db")
+		)
+		(instances
+			(project ""
+				(path "/15008eb5-6682-493f-a281-575da1029302"
+					(reference "RPU_SVS1")
 					(unit 1)
 				)
 			)
@@ -8211,6 +8839,15 @@
 				(hide yes)
 			)
 		)
+		(property "MANUFACTURER" ""
+			(at 38.1 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cdb30b5b-55d8-4af7-8ad0-626c39c815cd")
 		)
@@ -8273,7 +8910,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Slide Switch SPDT Through Hole"
+		(property "Description" "SWITCH SLIDE SPDT 200MA 30V"
 			(at 57.15 40.64 0)
 			(effects
 				(font
@@ -8323,7 +8960,7 @@
 				(hide yes)
 			)
 		)
-		(property "Check_prices" "https://www.snapeda.com/parts/EG1218/E-Switch/view-part/?ref=eda"
+		(property "Check_prices" "https://www.snapeda.com/parts/EG1213/E-Switch/view-part/?ref=eda"
 			(at 57.15 40.64 0)
 			(effects
 				(font
@@ -8343,7 +8980,7 @@
 				(hide yes)
 			)
 		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/EG1218/E-Switch/view-part/?ref=snap"
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/EG1213/E-Switch/view-part/?ref=snap"
 			(at 57.15 40.64 0)
 			(effects
 				(font
@@ -8353,7 +8990,7 @@
 				(hide yes)
 			)
 		)
-		(property "MP" "EG1218"
+		(property "MP" "EG1213"
 			(at 57.15 40.64 0)
 			(effects
 				(font
@@ -8393,7 +9030,7 @@
 				(hide yes)
 			)
 		)
-		(property "PURCHASE-URL" "https://pricing.snapeda.com/search/part/EG1218/?ref=eda"
+		(property "PURCHASE-URL" "https://pricing.snapeda.com/search/part/EG1213/?ref=eda"
 			(at 57.15 40.64 0)
 			(effects
 				(font
@@ -8412,7 +9049,25 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "EG1218"
+		(property "MPN" "EG1213"
+			(at 57.15 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SolderJoints" "5"
+			(at 57.15 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
 			(at 57.15 40.64 0)
 			(effects
 				(font
@@ -8521,6 +9176,15 @@
 				(hide yes)
 			)
 		)
+		(property "MANUFACTURER" ""
+			(at 158.75 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "60798794-6f97-4d99-9c27-dbdd359ac188")
 		)
@@ -8618,6 +9282,15 @@
 				(hide yes)
 			)
 		)
+		(property "MANUFACTURER" ""
+			(at 101.6 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c028b303-c0ad-4fdb-99a6-66e6063f5c59")
 		)
@@ -8656,7 +9329,7 @@
 		(at 54.61 118.11 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -8698,6 +9371,15 @@
 			)
 		)
 		(property "Description" "6-pin TC2030 connector for AVR ISP programming"
+			(at 54.61 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
 			(at 54.61 118.11 0)
 			(effects
 				(font
@@ -8807,6 +9489,15 @@
 			)
 		)
 		(property "SolderJoints" "2"
+			(at 106.68 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
 			(at 106.68 85.09 0)
 			(effects
 				(font
@@ -8969,7 +9660,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "fce0ee51-09aa-49ed-a3e0-1613e97a4f8d")
 		(property "Reference" "U2"
@@ -9007,7 +9698,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "ACCEL 2-16G I2C/SPI 12LGA"
+		(property "Description" "ACCELEROMETER 2-8G I2C/SPI 24QFN"
 			(at 55.88 158.75 0)
 			(effects
 				(font
@@ -9336,7 +10027,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" "ST Microelectronics"
+		(property "Manufacturer" "ST Microelectronics"
 			(at 55.88 158.75 0)
 			(effects
 				(font
@@ -9463,6 +10154,33 @@
 					(size 1.27 1.27)
 				)
 				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MPN" "IIS328DQTR"
+			(at 55.88 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SolderJoints" "25"
+			(at 55.88 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" ""
+			(at 55.88 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)

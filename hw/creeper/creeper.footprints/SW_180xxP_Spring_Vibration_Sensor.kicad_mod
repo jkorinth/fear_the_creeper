@@ -1,0 +1,99 @@
+(footprint "SW_180xxP_Spring_Vibration_Sensor"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Footprint for THT spring vibration sensors, 180xx series")
+	(property "Reference" "REF**"
+		(at 0 -4.191 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "c7184887-3f26-4d4f-9878-29324abd3fe1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "SW-180xxP"
+		(at 0 -1.016 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "a27946b4-6c4a-498c-b4c2-b01fd45dddd2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fba44d07-10fd-4cf4-9a78-4d7f1c2600d1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "SW-180xxP spring vibration sensor"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "27ea7c4b-2f50-4ff5-97b1-a3b0f0b56c18")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -1.524 -3.429)
+		(end 1.524 3.429)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "c68c70fa-135f-4cc2-9b35-a642c4843f90")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 1.016 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "bf15a12d-ecfc-4af0-86ea-cbc0bad77fac")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at 0 -2.54)
+		(size 2.55 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "210ac82b-2915-48df-bef9-c1d85ecbd1e2")
+	)
+	(pad "2" thru_hole oval
+		(at 0 2.54)
+		(size 2.55 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "b28d3b5b-9b99-4854-bebb-4da0e866e19e")
+	)
+	(embedded_fonts no)
+)
