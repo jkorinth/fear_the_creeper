@@ -1,8 +1,17 @@
 cmake_minimum_required(VERSION 3.16)
 project(sim C CXX)
 
+include(FetchContent)
+FetchContent_Declare(
+	spdlog
+	GIT_REPOSITORY https://github.com/gabime/spdlog.git
+	GIT_TAG        v1.15.3
+	EXCLUDE_FROM_ALL
+)
+FetchContent_MakeAvailable(spdlog)
+
 set(CMAKE_C_STANDARD 11)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 
 set(CMAKE_C_FLAGS_DEBBUG " -g3 -DDEBUG")
 set(CMAKE_CXX_FLAGS_DEBBUG " -g3 -DDEBUG")
@@ -32,6 +41,7 @@ target_compile_options(simavr_static INTERFACE
 	"-Wall"
 	"-O2"
 	"-g"
+	"-fconcepts-diagnostics-depth=3"
 )
 target_compile_definitions(simavr_static PRIVATE
 	-DHAVE_LIBELF=1
@@ -40,7 +50,7 @@ target_compile_definitions(simavr_static PRIVATE
 )
 target_link_libraries(simavr_static INTERFACE elf)
 
-add_executable(sim src/main.cpp src/leds.cpp)
+add_executable(sim src/main.cpp src/iis328dq.cpp)
 target_include_directories(sim PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/inc)
 target_compile_options(sim PUBLIC
 	"-Wall"
@@ -48,4 +58,4 @@ target_compile_options(sim PUBLIC
 	"-g"
 )
 
-target_link_libraries(sim PUBLIC simavr_static)
+target_link_libraries(sim PUBLIC simavr_static spdlog::spdlog)

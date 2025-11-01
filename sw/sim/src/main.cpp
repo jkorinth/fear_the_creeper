@@ -1,129 +1,94 @@
-#include <cstdlib>
-#include <cstdint>
-#include <iostream>
 #include <signal.h>
-#include <termios.h>
-#include <unistd.h>
+#include <simavr/avr/avr_mcu_section.h>
 #include <simavr/sim/sim_avr.h>
 #include <simavr/sim/sim_elf.h>
 #include <simavr/sim/sim_gdb.h>
-#include <simavr/avr/avr_mcu_section.h>
-#include "leds.h"
+#include <termios.h>
+#include <unistd.h>
+
+#include <cstdint>
+#include <cstdlib>
+#include <format>
+#include <iostream>
+
+#include "attiny85.hpp"
+#include "iis328dq.hpp"
+#include "led.hpp"
+#include "log.h"
 
 #undef F_CPU
 #define F_CPU 8000000
 
 static volatile int keep_running = 1;
 
-static void int_handler(int) {
-	keep_running =  0;
+static void int_handler(int) { keep_running = 0; }
+
+static int kb() {
+  struct timeval tv = {0L, 0L};
+  fd_set fds;
+  FD_ZERO(&fds);
+  FD_SET(STDIN_FILENO, &fds);
+  return select(1, &fds, NULL, NULL, &tv) > 0;
 }
 
-static int kb()
-{
-	struct timeval tv = {0L, 0L};
-	fd_set fds;
-	FD_ZERO(&fds);
-	FD_SET(STDIN_FILENO, &fds);
-	return select(1, &fds, NULL, NULL, &tv) > 0;
+static int simulate() {
+  std::shared_ptr<ATtiny85<F_CPU>> avr = std::make_shared<ATtiny85<F_CPU>>();
+  auto iis = IIS328DQ(avr);
+
+  Led<ATtiny85<F_CPU>, 'B', 4> leds(avr);
+  leds.on_change([&avr, &leds](uint32_t value) {
+    uint64_t delta_cycles = avr->cycle() - leds.last_ts();
+    trace(leds, "+{:10.4f}ms: LED changed to {}",
+          avr->cycles_to_nsec(delta_cycles) / 1000000.0f,
+          value ? "HIGH" : "LOW");
+  });
+
+  info(sim, "firmware loaded for {} at {} Hz", avr->mcu(), avr->frequency());
+  info(sim, "ATtiny85 simulation started");
+
+  uint64_t cycle_count = 0;
+
+  while (keep_running) {
+    auto state = avr->step();
+
+    if (state == CpuState::DONE || state == CpuState::CRASHED) {
+      info(sim, "Simulation ended: state={}", std::format("{}", state));
+      break;
+    }
+
+    cycle_count++;
+
+    if (kb()) {
+      getchar();
+      break;
+    }
+  }
+
+  info(sim, "Simulation ran for {} cycles.", cycle_count);
+  return 0;
 }
 
-static int load_firmware(const char *filename, elf_firmware_t *fw)
-{
-	int ret = 0;
-	std::cout << "Loading firmware " << filename << " ..." << std::endl;
-	if ((ret = elf_read_firmware(filename, fw)) != 0) {
-		std::cerr << "could not load firmware: " << ret << std::endl;
-		return ret;
-	}
-	return ret;
+static void set_nb(int enable) {
+  static struct termios oldt, newt;
+
+  if (enable) {
+    tcgetattr(STDIN_FILENO, &oldt);
+    newt = oldt;
+    newt.c_lflag &= ~(ICANON | ECHO);
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+  } else {
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+  }
 }
 
-static int simulate()
-{
-	int ret = 0;
-	elf_firmware_t *fw = static_cast<elf_firmware_t *>(calloc(1, sizeof(*fw)));
-	if (! fw) {
-		std::cerr << "ERROR: could not allocate memory for firmware!" << std::endl;
-		return -1;
-	}
-
-	if ((ret = load_firmware("../.pio/build/attiny85/firmware.elf", fw)) != 0) {
-		return ret;
-	}
-
-	avr_t *avr = avr_make_mcu_by_name("attiny85");
-	if (! avr) {
-		std::cerr << "failed to create attiny85 instance" << std::endl;
-	}
-
-	avr->frequency = F_CPU;
-	avr_init(avr);
-	avr_load_firmware(avr, fw);
-
-	void *leds = init_leds(avr);
-
-	printf("firmware loaded for %s at %d Hz\n", fw->mmcu, avr->frequency);
-	fflush(stdout);
-
-	std::cout << "ATtiny85 simulation started"
-		<< std::endl
-		<< "Initial PC: "
-		<< avr->pc
-		<< std::endl
-		<< "Press any key to exit"
-		<< std::endl;
-
-	uint64_t cycle_count = 0;
-
-	while (keep_running) {
-		int state = avr_run(avr);
-
-		if (state == cpu_Done || state == cpu_Crashed) {
-			printf("\nSimulation ended: state=%d\n", state);
-			break;
-		}
-
-		cycle_count++;
-
-		if (cycle_count % 100 == 0) {
-			printf("\rCycle count: %012lu", cycle_count);
-			fflush(stdout);
-		}
-
-		if (kb()) {
-			getchar();
-			break;
-		}
-	}
-
-	avr_terminate(avr);
-	free(leds);
-	free(fw);
-	std::cout << std::endl << "ran for " << cycle_count << " cycles." << std::endl;
-	return 0;
-}
-
-static void set_nb(int enable)
-{
-	static struct termios oldt, newt;
-
-	if (enable) {
-		tcgetattr(STDIN_FILENO, &oldt);
-		newt = oldt;
-		newt.c_lflag &= ~(ICANON | ECHO);
-		tcsetattr(STDIN_FILENO, TCSANOW, &newt);
-	} else {
-		tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-	}
-}
-
-int main(int argc, const char **argv)
-{
-	int result = 0;
-	signal(SIGINT, int_handler);
-	set_nb(true);
-	result = simulate();
-	set_nb(false);
-	return result;
+int main(int argc, const char **argv) {
+  int result = 0;
+  init_logging(argc, argv);
+  spdlog::set_level(spdlog::level::trace);
+  signal(SIGINT, int_handler);
+  set_nb(true);
+  info(main, "starting simulation ...");
+  result = simulate();
+  set_nb(false);
+  return result;
 }
