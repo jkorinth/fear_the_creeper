@@ -6240,7 +6240,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0b5947e1-627c-4358-a888-721263eb5354")
 		(property "Reference" "SVS1"
@@ -6477,7 +6477,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "206bb6ff-ded4-4b64-9e45-21cbe881f07e")
 		(property "Reference" "U3"
 			(at 143.764 39.37 0)
@@ -8513,7 +8513,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "aeeaa8ce-184a-439c-9610-286e074a597e")
 		(property "Reference" "RPU_INT1"
 			(at 84.582 54.61 90)
@@ -8697,7 +8697,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "bcc6a6de-d343-424d-b6ec-16ba561b506a")
 		(property "Reference" "RPU_SVS1"
@@ -9660,7 +9660,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fce0ee51-09aa-49ed-a3e0-1613e97a4f8d")
 		(property "Reference" "U2"
