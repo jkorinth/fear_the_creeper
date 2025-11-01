@@ -1,64 +1,80 @@
 #include <Arduino.h>
-#include <TinyWireM.h>
+#include <I2CTinyBB.h>
+#include <avr/interrupt.h>
 #include <avr/power.h>
-#include "lut.h"
+#include <avr/sleep.h>
+#include "iis328dq.h"
 
-const int LED = 4;
-const int BUZ = 3;
+#define INT 2
+#define BUZ 3
+#define LED 4
 
-#define PIEZO_PIN  BUZ
-#define PIEZO_PORT PORTB
-#define PIEZO_BIT (1 << PIEZO_PIN)
+#define IIS328DQ_ADDR 0x18
+#define REG_WHO_AM_I 0x0f
+#define REG_CTRL_REG1 0x20
+
+#define ARR_SZ(x) (sizeof((x)) / sizeof(*(x)))
+
+volatile int _play = 1;
+
+void iis328dq_init()
+{
+	uint8_t d = 0;
+	for (size_t i = 0; i < IIS328DQ_INIT_COUNT; ++i) {
+		uint8_t tmp[2] = { iis328dq_shake_init[i].reg, iis328dq_shake_init[i].value };
+		I2CWrite(IIS328DQ_ADDR, tmp, 2);
+		I2CReadReg(IIS328DQ_ADDR, tmp[0], &d, 1);
+	}
+}
 
 void setup() {
+  uint8_t d;
   clock_prescale_set(clock_div_1);
-  pinMode(LED, OUTPUT);
-  pinMode(BUZ, OUTPUT);
+  DDRB = (1 << PB4) | (1 << PB3) | (1 << PB1) | (1 << PB0);
+  PORTB = 0;
+  MCUCR = 0; // low level-triggered interrupt
+  GIMSK |= (1 << INT0);  // Enable INT0 external interrupt
+  I2CInit(0, 1, 10);
+  sei();
+  iis328dq_init();
 }
 
-void hiss() {
-	tone(BUZ, random(5000, 19999));
-	delay(random(1, 10));
+// Interrupt Service Routine for INT0
+ISR(INT0_vect) {}
+
+void enterSleep() {
+  uint8_t d = 0;
+  MCUCR = 0;
+  GIMSK |= (1 << INT0);  // Enable INT0 external interrupt
+  
+  set_sleep_mode(SLEEP_MODE_PWR_DOWN);  // Set deep sleep mode
+  sleep_enable();  // Enable sleep bit
+  sei();  // Enable global interrupts
+  sleep_cpu();  // Go to sleep - execution stops here
+  
+  // Code resumes here after wake-up
+  sleep_disable();  // Disable sleep bit
+  GIMSK &= ~(1 << INT0);  // disable INT0 external interrupt
+  I2CReadReg(IIS328DQ_ADDR, IIS328DQ_INT1_SRC, &d, 1);
+  _play = 1;
 }
 
-void bang() {
-  int startFreq = 2000;  // Start high (the "crack")
-  int endFreq = 200;     // End low (the "thud")
-  int duration = 250;    // Total time of the bang in ms
-  int stepDelay = 5;     // Delay between frequency steps (ms)
-
-  for (int freq = startFreq; freq >= endFreq; freq -= (startFreq - endFreq) / (duration / stepDelay)) {
-    tone(PIEZO_PIN, freq);
-    delay(stepDelay);
-  }
-  noTone(PIEZO_PIN);
+void play()
+{
+	int countdown = 700;
+	while (countdown > 0) {
+		digitalWrite(LED, HIGH);
+		delay(25);
+		digitalWrite(LED, LOW);
+		countdown *= 0.84;
+		delay(countdown);
+	}
+	_play = 0;
 }
-
 
 void loop() {
-	static int i = 0;
-	digitalWrite(LED, HIGH);
-	delay(10);
-	if (i < 100) {
-		digitalWrite(LED, LOW);
-		delayMicroseconds(pgm_read_word(&LUT[i++]));
+	if (_play) {
+		play();
 	}
-	return;
-	static int state = 0;
-	static int w = 0;
-	if (!state) {
-		hiss();
-		w += 1;
-		//delay(250);
-		if (w > 1000) {
-			state++;
-		}
-	} else {
-		bang();
-		bang();
-		bang();
-		state = 0;
-		w = 0;
-		delay(1000);
-	}
+	enterSleep();
 }
