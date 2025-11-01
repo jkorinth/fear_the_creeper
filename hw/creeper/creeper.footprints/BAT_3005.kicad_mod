@@ -197,7 +197,6 @@
 		(drill 1.85)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(solder_mask_margin 0.102)
 		(uuid "50d35610-72e8-405d-ab14-6d06d70ec407")
 	)
 	(pad "1" thru_hole circle
@@ -206,14 +205,12 @@
 		(drill 1.85)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(solder_mask_margin 0.102)
 		(uuid "c9732949-a2b5-46af-9a19-8b6d433e915d")
 	)
 	(pad "2" smd rect
 		(at 0 0)
 		(size 3.96 3.96)
 		(layers "F.Cu" "F.Mask")
-		(solder_mask_margin 0.102)
 		(uuid "6b423041-f728-47cf-a52d-b304d50bf168")
 	)
 	(embedded_fonts no)
