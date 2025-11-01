@@ -42,32 +42,35 @@
       {
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [
-            clang
-            clang-analyzer
-            libelf
-            libusb1
-            pkg-config
-            simavr
             arduino-cli
             audacity
             avrdude
+            clang
+            clang-analyzer
             cmake
             cppcheck
             ffmpeg-full
             freecad
             gcc
+            gtkwave
             jre
             kicad
+            libelf
+            libusb1
             meshlab
             minicom
             openscad
             pio_install_and_patch
+            pkg-config
             platformio
+            pulseview
             python3Full
             python3Packages.numpy
             python3Packages.pip
             python3Packages.pydub
             saleae-logic-2
+            sigrok-cli
+            simavr
             super-slicer
             vscode
             zip
