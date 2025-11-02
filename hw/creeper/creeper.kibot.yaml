@@ -108,6 +108,13 @@ outputs:
     ray_tracing: true
     orthographic: true
     view: bottom
+- name: navigate_results
+  comment: "Generates a web page to navigate the results"
+  type: navigate_results
+  dir: navigate
+  options:
+    title: "Fear the Creeper!"
+
 
 ...
 definitions:
