@@ -13,6 +13,16 @@
           inherit system;
           config.allowUnfree = true;
         };
+        kbcli = pkgs.writeShellScriptBin "kbcli" ''
+          	  #!/usr/bin/env bash
+          	  ${pkgs.podman}/bin/podman run --rm -it \
+		    --userns=keep-id \
+          	    --env NO_AT_BRIDGE=1 \
+          	    --env DISPLAY=$DISPLAY \
+          	    --workdir="/home/$USER" \
+          	    --volume="/home/$USER:/home/$USER:rw" \
+          	    ghcr.io/inti-cmnb/kicad9_auto_full:latest /bin/bash
+          	'';
         pio_install_and_patch = pkgs.writeShellScriptBin "pio-install-and-patch" ''
                     	#!/usr/bin/env bash
           		TOOLCHAIN="''${1:-atmelavr}"
@@ -42,6 +52,7 @@
       {
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [
+            kbcli
             arduino-cli
             audacity
             avrdude
