@@ -6446,7 +6446,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "Vishay Dale"
 			(at 48.26 88.9 90)
 			(effects
 				(font
@@ -6551,7 +6551,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "Nexperia USA Inc."
 			(at 151.13 53.34 0)
 			(effects
 				(font
@@ -6694,7 +6694,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "KEMET"
 			(at 105.41 38.1 90)
 			(effects
 				(font
@@ -6932,7 +6932,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "Vishay Dale"
 			(at 96.52 85.09 0)
 			(effects
 				(font
@@ -7035,7 +7035,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "KEMET"
 			(at 78.74 171.45 90)
 			(effects
 				(font
@@ -7292,7 +7292,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "Vishay Dale"
 			(at 119.38 60.96 90)
 			(effects
 				(font
@@ -7674,7 +7674,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "Vishay Dale"
 			(at 142.24 88.9 0)
 			(effects
 				(font
@@ -7919,7 +7919,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "ams-OSRAM USA INC."
 			(at 106.68 91.44 0)
 			(effects
 				(font
@@ -8032,7 +8032,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "ams-OSRAM USA INC."
 			(at 96.52 91.44 0)
 			(effects
 				(font
@@ -8204,7 +8204,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "Keystone Electronics"
 			(at 50.8 63.5 0)
 			(effects
 				(font
@@ -8376,7 +8376,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "Murata Electronics"
 			(at 39.37 62.23 0)
 			(effects
 				(font
@@ -8482,7 +8482,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "Vishay Dale"
 			(at 157.48 88.9 0)
 			(effects
 				(font
@@ -8585,7 +8585,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "Vishay Dale"
 			(at 82.55 54.61 90)
 			(effects
 				(font
@@ -8839,7 +8839,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "Vishay Dale"
 			(at 38.1 153.67 0)
 			(effects
 				(font
@@ -9067,7 +9067,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "E-Switch"
 			(at 57.15 40.64 0)
 			(effects
 				(font
@@ -9176,7 +9176,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "KEMET"
 			(at 158.75 38.1 90)
 			(effects
 				(font
@@ -9282,7 +9282,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "Microchip Technology"
 			(at 101.6 53.34 0)
 			(effects
 				(font
@@ -9497,7 +9497,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "Vishay Dale"
 			(at 106.68 85.09 0)
 			(effects
 				(font
@@ -10175,7 +10175,7 @@
 				(hide yes)
 			)
 		)
-		(property "MANUFACTURER" ""
+		(property "MANUFACTURER" "ST Microelectronics"
 			(at 55.88 158.75 0)
 			(effects
 				(font
