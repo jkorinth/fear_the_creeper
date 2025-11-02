@@ -1,0 +1,123 @@
+kibot:
+  version: 1
+
+import:
+- file: ExportProject
+- file: JLCPCB
+  definitions:
+    _KIBOT_MANF_DIR: Manufacturers/JLCPCB
+    _KIBOT_POS_PRE_TRANSFORM: '[''_kicost_rename'', ''_rot_footprint'']'
+    _KIBOT_BOM_ENABLED: 'false'
+- file: PCB2Blender_2_1
+- file: PCBWay
+  definitions:
+    _KIBOT_MANF_DIR: Manufacturers/PCBWay
+
+preflight:
+  drc:
+    dont_stop: true
+    format: HTML,RPT
+  erc:
+    dont_stop: true
+    format: HTML,RPT
+
+outputs:
+- name: basic_export_3d_step
+  comment: 3D model in STEP format
+  type: export_3d
+  dir: 3D
+  options:
+    format: step
+- name: basic_export_3d_stl
+  comment: 3D model in STL format
+  type: export_3d
+  dir: 3D
+  options:
+    format: stl
+- name: gerber_modern
+  comment: Gerbers in modern format, recommended by the standard
+  type: gerber
+  dir: Gerbers
+  layers:
+  - layer: F.Cu
+    suffix: F_Cu
+    description: Front copper
+  - layer: F.Mask
+    suffix: F_Mask
+    description: Front soldermask (negative)
+  - layer: B.Cu
+    suffix: B_Cu
+    description: Bottom copper
+  - layer: B.Mask
+    suffix: B_Mask
+    description: Bottom soldermask (negative)
+  - layer: F.Silkscreen
+    suffix: F_Silkscreen
+    description: Front silkscreen (artwork)
+  - layer: B.Silkscreen
+    suffix: B_Silkscreen
+    description: Bottom silkscreen (artwork)
+  - layer: Edge.Cuts
+    suffix: Edge_Cuts
+    description: Board shape
+  - layer: B.Courtyard
+    suffix: B_Courtyard
+    description: Bottom courtyard area
+  - layer: F.Courtyard
+    suffix: F_Courtyard
+    description: Front courtyard area
+- name: basic_ibom
+  comment: Interactive HTML BoM
+  type: ibom
+  dir: Assembly
+- name: classic_netlist
+  comment: Schematic netlist in KiCad format
+  type: netlist
+  dir: Export
+- name: ipc_netlist
+  comment: IPC-D-356 netlist for testing
+  type: netlist
+  dir: Export
+  options:
+    format: ipc
+- name: basic_pdf_sch_print
+  comment: Schematic in PDF format
+  type: pdf_sch_print
+  dir: Schematic
+- name: basic_render_3d_top
+  comment: 3D view from top
+  type: render_3d
+  dir: 3D
+  options:
+    ray_tracing: true
+    orthographic: true
+- name: basic_render_3d_30deg
+  comment: 3D view from 30 degrees
+  type: render_3d
+  dir: 3D
+  output_id: 30deg
+  options:
+    ray_tracing: true
+    rotate_x: 3
+    rotate_z: -2
+- name: basic_render_3d_bottom
+  comment: 3D view from bottom
+  type: render_3d
+  dir: 3D
+  options:
+    ray_tracing: true
+    orthographic: true
+    view: bottom
+
+...
+definitions:
+  _KIBOT_MANF_DIR_COMP: Manufacturers
+  _KIBOT_GERBER_LAYERS: "- layer: 'F.Cu'\n        suffix: 'F_Cu'\n        description:\
+    \ 'Front copper'\n      - layer: 'F.Mask'\n        suffix: 'F_Mask'\n        description:\
+    \ 'Front soldermask (negative)'\n      - layer: 'B.Cu'\n        suffix: 'B_Cu'\n\
+    \        description: 'Bottom copper'\n      - layer: 'B.Mask'\n        suffix:\
+    \ 'B_Mask'\n        description: 'Bottom soldermask (negative)'\n      - layer:\
+    \ 'F.Silkscreen'\n        suffix: 'F_Silkscreen'\n        description: 'Front\
+    \ silkscreen (artwork)'\n      - layer: 'B.Silkscreen'\n        suffix: 'B_Silkscreen'\n\
+    \        description: 'Bottom silkscreen (artwork)'\n      - layer: 'Edge.Cuts'\n\
+    \        suffix: 'Edge_Cuts'\n        description: 'Board shape'"

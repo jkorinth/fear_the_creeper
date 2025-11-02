@@ -1,4 +1,5 @@
 (fp_lib_table
   (version 7)
   (lib (name "creeper")(type "KiCad")(uri "${KIPRJMOD}/creeper.footprints")(options "")(descr ""))
+  (lib (name "PCM_marbastlib-various")(type "KiCad")(uri "libs/marbastlib/footprints/marbastlib-various.pretty")(options "")(descr "Marbast various footprints"))
 )

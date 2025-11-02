@@ -1,0 +1,3 @@
+[submodule "hw/creeper/libs/marbastlib"]
+	path = hw/creeper/libs/marbastlib
+	url = https://github.com/ebastler/marbastlib.git
