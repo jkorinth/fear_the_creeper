@@ -1,3 +1,6 @@
 [submodule "hw/creeper/libs/marbastlib"]
 	path = hw/creeper/libs/marbastlib
 	url = https://github.com/ebastler/marbastlib.git
+[submodule "sw/I2CTinyBB"]
+	path = sw/I2CTinyBB
+	url = https://git@github.com/roberttidey/I2CTinyBB
